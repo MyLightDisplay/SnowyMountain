@@ -1,0 +1,35 @@
+<header>
+    <nav class="container fixed-top" id="mainNav">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <a href="~/@(Tenant?.SiteFolderName ?? "")" class="navbar-brand" style="color: #DCB843;"><img src="/MyLightDisplay/images/MyLightDisplay.png" alt="@(Tenant?.SiteName)" /></a>
+            </div>
+            <div class="col-12 col-md-6 text-center text-md-right">
+                <div id="s_header_whatson">
+                    <img id="song-background-image" src="/MyLightDisplay/images/lights-off.gif" alt="The Lights are Off">
+                    <div id="s_header_whatson_container">
+                        <span id="s_header_song"></span>
+                        <span id="s_header_song_info"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    @**@@*
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+            <span class="skiplink-text">Skip to main content</span>
+        </div>
+    </a>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a href="~/@(Tenant?.SiteFolderName ?? "")" class="navbar-brand" style="color: #DCB843;"><img src="/MyLightDisplay/images/MyLightDisplay.png" alt="@(Tenant?.SiteName)" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            @await Component.InvokeAsync("Navigation", new { viewName = "Bootstrap4TopNavWithDropdowns", filterName = NamedNavigationFilters.TopNav, startingNodeKey = "" })
+
+        </div>
+    </nav>*@
+</header>
