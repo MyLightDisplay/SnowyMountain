@@ -1,0 +1,253 @@
+@charset "UTF-8";
+
+/* @import "variables/variables";
+@import "core/core"; */
+
+@import "bs4/bs4";
+@import "original/jquery-smartmenu-bootstrap";
+@import "original/font-awesome";
+
+$footer-sm-height: 200px;
+$footer-md-height: 360px;
+
+$color-background: #05121e;
+$color-button: #DCBE59;
+$color-lightgrey: #aaa;
+$color-grey: #555;
+$color-white: #fff;
+
+$font-heavy: 'Assistant', cursive;
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background: url('/MyLightDisplay/images/night-background.png') no-repeat bottom center, url('/MyLightDisplay/images/main-background.png') repeat-x bottom left, $color-background;
+    color: $color-white;
+    min-height: 100vh;
+    padding-top: 6rem;
+    font-family: 'Muli', sans-serif;
+}
+
+#disqus_thread {
+    body, header > nav, footer {
+        background-image: none;
+        background-color: transparent;
+    }
+}
+
+a, a:visited, a:hover {
+    color: #ccc !important;
+    text-decoration: underline;
+}
+
+header > nav {
+    background-color: $color-background;
+
+    img {
+        height: 5rem;
+    }
+}
+
+#s_header_whatson_container {
+    position: absolute;
+    text-align: center;
+
+    #s_header_song {
+        display: block;
+        font-size: 1.3rem;
+        font-weight: bold;
+        font-family: $font-heavy;
+        line-height: 1rem;
+        margin-top: 1.3rem;
+    }
+
+    #s_header_song_info {
+        display: block;
+        font-size: .85rem;
+    }
+}
+
+#s_body_song_history_time {
+    font-size: .85rem;
+    color: $color-lightgrey;
+}
+
+.published {
+    font-size: .85rem;
+    color: $color-lightgrey;
+}
+
+.breadcrumb {
+    background-color: $color-background;
+}
+
+.pagination {
+    a, a:hover, a:visited {
+        background-color: $color-button;
+        border-color: $color-button;
+        color: $color-background !important;
+    }
+}
+
+footer {
+    background-image: url('/MyLightDisplay/images/footer-background.png');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: $color-grey;
+    font-size: .8rem;
+    height: $footer-sm-height;
+
+    @media screen and (min-width: 768px) {
+        height: $footer-md-height;
+    }
+
+    a, a:hover, a:visited {
+        color: $color-grey !important;
+    }
+
+    .credits {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+h1, h3 {
+    font-family: $font-heavy;
+}
+
+
+.btn-primary, .btn-info, .btn-primary:hover, .btn-info:hover, .btn-primary:visited, .btn-info:visited {
+    background-color: $color-button !important;
+    border-color: $color-button !important;
+    color: $color-background !important;
+    font-family: $font-heavy;
+    text-decoration: none;
+}
+
+.social-media {
+    a, a:hover, a:visited {
+        color: $color-white;
+    }
+
+    @media screen and (max-width: 767px) {
+        padding-top: 1rem;
+    }
+}
+
+.consent-link {
+    .btn.btn-link {
+        padding: 0;
+        color: $color-grey;
+        font-size: .8rem;
+    }
+}
+
+.blogposts {
+    li {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .postbody {
+        margin-top: .75rem;
+        margin-bottom: .75rem;
+    }
+}
+
+.post-item {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.m-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#wrapper {
+    padding-bottom: ($footer-sm-height * 1.7);
+
+    @media screen and (min-width: 768px) {
+        padding-bottom: $footer-md-height;
+    }
+}
+
+#newPostLink {
+    position: absolute;
+    top: 70px;
+    right: 0px;
+}
+
+#editPostLink {
+    position: absolute;
+    top: 100px;
+    right: 0px;
+}
+
+#unpublishPostLink {
+    position: absolute;
+    top: 130px !important;
+    right: 0px !important;
+}
+
+#pageManagerLink {
+    position: absolute;
+    top: 70px;
+    right: 0px;
+}
+
+#newPageLink {
+    position: absolute;
+    top: 100px;
+    right: 0px;
+}
+
+#editPageLink {
+    position: absolute;
+    top: 130px;
+    right: 0px
+}
+
+#unpublishPageLink {
+    position: absolute;
+    top: 160px !important;
+    right: 0px !important
+}
+
+#sidenavtoggle {
+    position: absolute;
+    top: 120px;
+    right: 5px;
+}
+
+@media screen and (max-width: 812px) {
+    #sidenavtoggle,
+    #sidenavmenu {
+        display: none;
+    }
+}
+
+.flex-fill {
+    flex: 1 1 auto !important;
+}
+
+img, video, iframe {
+    max-width: 100%;
+}
+
+td img, video, iframe {
+    max-width: none;
+}
+
+.table td, .table th {
+    vertical-align: inherit;
+}
